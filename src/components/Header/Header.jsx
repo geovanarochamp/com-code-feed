@@ -1,6 +1,6 @@
 import styles from './Header.module.css'
 
-import comcodeLogo from '../assets/favicon.png'
+import comcodeLogo from '../../assets/favicon.png'
 
 export function Header() {
     return (
