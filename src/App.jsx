@@ -1,5 +1,6 @@
 import { Header } from './components/Header/Header'
 import { Profile } from './components/Profile/Profile'
+import { Post } from './components/Posts/Posts'
 
 import './global.css'
 import styles from './App.module.css'
@@ -11,9 +12,7 @@ function App() {
       <Header />
       <div className={styles.container}>
         <Profile />
-        <main>
-          Posts
-        </main>
+        <Post />
 
       </div>
     </div>

@@ -1,4 +1,5 @@
 import styles from './Profile.module.css'
+import { PencilLine } from "phosphor-react"
 
 export function Profile() {
     return (
@@ -8,11 +9,12 @@ export function Profile() {
           <div className={styles.profileImg}> <img src="https://github.com/geovanarochamp.png" /></div>
 
           <strong>Geovana Rocha</strong>
-          <p>Desenvolvedora Front-End</p>
+          <span>Desenvolvedora Front-End</span>
 
           <div className={styles.separatorLine}></div>
 
-          <a className={styles.editProfileButton} href="#"><img src="./src/assets/icon-editprofile.svg" /> Editar seu Perfil</a>
+          <a className={styles.editProfileButton} href="#">
+            <PencilLine size={20}/> Editar seu Perfil</a>
 
         </aside>
     )

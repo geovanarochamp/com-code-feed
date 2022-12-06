@@ -1,5 +1,4 @@
-.profileContent {
-    width: 256px;
+.profileContent {    
     overflow: hidden;
 
     display: flex;
@@ -8,24 +7,24 @@
     align-items: center;
 
     border-radius: 8px;
-    background: #202024;
+    background: var(--gray-800);
 }
 
 .profileCover {
-    height: 72px;
+    height: 7.2rem;
     width: 100%;
 }
 
 .profileCover img {
-    height: 72px;
+    height: 7.2rem;
     width: 100%;
 
     object-fit: cover;
 }
 
 .profileImg {
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
 
     padding: 6px;
 
@@ -34,53 +33,62 @@
     align-items: center;
 
     background: #202024;
-    border: 2px solid var(--red-600);
+    border: 2px solid var(--green-300);
     border-radius: 8px;
 
     margin: -32px auto 16px;
 }
 
 .profileImg img {
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
 
     border-radius: 5px;
 }
 
 .profileContent strong {
-    color: var(--title-color);
+    color: var(--gray-300);
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 160%;
 }
 
-.profileContent p {
-    color: var(--p-color);
+.profileContent span {
+    color: var(--gray-500);
     font-size: 1.4rem;
     line-height: 160%;
 }
 
 .separatorLine {
     width: 100%;
-    border-top: 1px solid #323238;
-    margin: 2.4rem 0;
+    border-top: 1px solid var(--gray-600);
+    margin-top: 2.4rem;
 }
 
 .editProfileButton {
     text-decoration: none;
 
-    padding: 1.6rem 2.4rem;
+    padding: 1.6rem 2rem;
+    margin: 2.4rem auto 3.2rem;
+
 
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
 
-    border: 1px solid var(--red-600);
-    border-radius: 8px;
-    margin-bottom: 3.2rem;
+    border: 1px solid var(--green-300);
+    border-radius: 8px;    
 
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 1.9rem;    
-    color: var(--red-600);
+    color: var(--green-300);
+
+    transition: color .2s, background .2s;
+}
+
+.editProfileButton:hover {
+    color: var(--gray-300);
+    background: var(--green-300);
 }

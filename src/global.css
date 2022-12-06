@@ -7,21 +7,21 @@
 :root {
     font-size: 62.5%; /* 10px */
 
-    --red-400: #f92f47;
-    --red-600: #d33245;
-    --red-700: #ae2031;
+    --green-300: #61b171;
+    --green-500: #60e27a;
 
     --gray-300: #e1e1e6;
     --gray-400: #c4c4cc;
-    --gray-600: #454d59;
-    --gray-800: #343a42;
-    --gray-900: #282f38;
+    --gray-500: #8D8D99;
+    --gray-600: #48515e;
+    --gray-800: #313944;
+    --gray-900: #1e242c;
 
     --blue-600: #164669;
 
     --white: #fff;
-    --title-color: #e1e1e6;
-    --p-color: #8D8D99;
+    /* --title-color: #e1e1e6;
+    --p-color: #8D8D99; */
 }
 
 body {
@@ -33,5 +33,5 @@ body {
 body, input, textarea, button {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.6rem;
 }
