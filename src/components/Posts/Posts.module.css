@@ -5,6 +5,10 @@
     border-radius: 8px;
 }
 
+.post + .post {
+    margin-top: 3.2rem;
+}
+
 .postHeader {
     display: flex;
     justify-content: space-between;
@@ -70,6 +74,7 @@
 .postContent a {
     text-decoration: none;
     color: var(--green-300);
+    font-weight: bold;
 }
 
 .postContent a:hover {
