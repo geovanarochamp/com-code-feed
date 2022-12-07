@@ -9,13 +9,13 @@
     margin-top: 3.2rem;
 }
 
-.postHeader {
+.post header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.postHeader time {
+.post header time {
     font-size: 1.4rem;
     line-height: 1.6;
     color: var(--gray-500);
