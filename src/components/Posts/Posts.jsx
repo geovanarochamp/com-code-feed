@@ -1,8 +1,46 @@
+import { Avatar } from '../Avatar/Avatar'
 import styles from './Posts.module.css'
 
 export function Post() {
     return (
         <div className="posts">
+            <div className={styles.post}>
+                <div className={styles.postHeader}>
+                    <div className={styles.author}>                        
+                        <Avatar src="https://github.com/geovanarochamp.png"/>
+                        
+                        <div className={styles.authorInfo}>
+                            <strong>Geovana Rocha</strong>
+                            <span>Dev Front-End</span>
+                        </div>
+                    </div>
+                    <time title='06 de Dezembro de 2022' dateTime='06-12-2022 08:30:34'>Publicado há 1h</time>
+                </div>
+
+                <div className={styles.postContent}>
+                    <p>Fala galeraa 👋</p>
+
+                    <p>Contruí um sistema de busca de usuários do github e foi minha primeira aplicação react. 🚀</p>
+
+                    <p>Quem puder ir dar uma olhada, e adicionar o user de vocês para ver se está tudo ok!</p>
+
+                    <p><a href="#">👉 github.com/geovanarochamp/search-github-users</a></p>
+
+                    <p><a href="#">#novoprojeto</a> <a href="#">#reactjs</a> <a href="#">#javascript</a></p>
+                </div>
+
+                <div className={styles.separatorLine}></div>
+
+                <div className={styles.coments}>
+                    <strong>Deixe seu feedback</strong>
+                    <form action="">
+                        <textarea name="" id="" rows="3"></textarea>
+                        <button className={styles.publishBtn}>Publicar</button>
+                    </form>
+                </div>                                            
+            </div>
+           
+
             <div className={styles.post}>
                 <div className={styles.postHeader}>
                     <div className={styles.author}>
@@ -26,36 +64,10 @@ export function Post() {
 
                     <p><a href="#">👉 github.com/geovanarochamp/search-github-users</a></p>
 
-                    <p><a href="#">#novoprojeto</a> <a href="#">#reactjs</a> <a href="#">#javascript</a></p>
+                <p><a href="#">#novoprojeto</a> <a href="#">#reactjs</a> <a href="#">#javascript</a></p>
+                
                 </div>
             </div>
-
-            <div className={styles.post}>
-            <div className={styles.postHeader}>
-                <div className={styles.author}>
-                    <div className={styles.authorImg}>
-                        <img src="https://github.com/geovanarochamp.png" />
-                    </div>
-                    <div className={styles.authorInfo}>
-                        <strong>Geovana Rocha</strong>
-                        <span>Dev Front-End</span>
-                    </div>
-                </div>
-                <time title='06 de Dezembro de 2022' dateTime='06-12-2022 08:30:34'>Publicado há 1h</time>
-            </div>
-
-            <div className={styles.postContent}>
-                <p>Fala galeraa 👋</p>
-
-                <p>Contruí um sistema de busca de usuários do github e foi minha primeira aplicação react. 🚀</p>
-
-                <p>Quem puder ir dar uma olhada, e adicionar o user de vocês para ver se está tudo ok!</p>
-
-                <p><a href="#">👉 github.com/geovanarochamp/search-github-users</a></p>
-
-            <p><a href="#">#novoprojeto</a> <a href="#">#reactjs</a> <a href="#">#javascript</a></p>
-        </div>
-        </div>
         </div>
     )
 }

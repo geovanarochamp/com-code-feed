@@ -1,0 +1,21 @@
+.avatar {
+    width: 6rem;
+    height: 6rem;
+
+    padding: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #202024;
+    border: 2px solid var(--green-300);
+    border-radius: 8px;
+}
+
+.avatar img {
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 5px;
+}

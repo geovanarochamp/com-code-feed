@@ -7,8 +7,9 @@
 :root {
     font-size: 62.5%; /* 10px */
 
+    --green-500: #629d6e;
     --green-300: #61b171;
-    --green-500: #60e27a;
+    --green-100: #60e27a;
 
     --gray-300: #e1e1e6;
     --gray-400: #c4c4cc;
@@ -18,10 +19,10 @@
     --gray-900: #1e242c;
 
     --blue-600: #164669;
+    
+    --red-500: #F75A68;
 
-    --white: #fff;
-    /* --title-color: #e1e1e6;
-    --p-color: #8D8D99; */
+    --white: #fff;    
 }
 
 body {
@@ -34,4 +35,8 @@ body, input, textarea, button {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
+}
+
+:focus {
+    border: 1px solid var(--green-300);
 }
