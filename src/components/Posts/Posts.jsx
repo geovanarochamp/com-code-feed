@@ -31,13 +31,15 @@ export function Post() {
 
                 <div className={styles.separatorLine}></div>
 
-                <div className={styles.coments}>
+                <form className={styles.commentForm}>
                     <strong>Deixe seu feedback</strong>
-                    <form action="">
-                        <textarea name="" id="" rows="3"></textarea>
-                        <button className={styles.publishBtn}>Publicar</button>
+                    <form>
+                        <textarea placeholder="Escreva aqui um comentário..." />
+                        <footer>
+                            <button className={styles.publishBtn}>Publicar</button>
+                        </footer>
                     </form>
-                </div>                                            
+                </form>                                            
             </div>
            
 
