@@ -5,7 +5,7 @@ import { HandsClapping, Trash } from 'phosphor-react'
 export function Comment() {
     return (
         <div className={styles.commentWrapper}>
-            <Avatar src="https://github.com/geovanarochamp.png" />
+            <Avatar hasBorder={false} src="https://github.com/geovanarochamp.png" />
             <div className={styles.comment}>
                 <div className={styles.commentContent}>
                     <header>
