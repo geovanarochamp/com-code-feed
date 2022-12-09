@@ -1,6 +1,6 @@
 import styles from './Comment.module.css'
 import { Avatar } from '../Avatar/Avatar'
-import { Trash } from 'phosphor-react'
+import { HandsClapping, Trash } from 'phosphor-react'
 
 export function Comment() {
     return (
@@ -16,7 +16,11 @@ export function Comment() {
 
                         <button title="Deletar comentário"><Trash size={24}/></button>
                     </header>
+                    <p>Muito bom! Parabéns! 👏👏</p>
                 </div>
+                <footer>
+                    <button><HandsClapping size={20} /> Aplaudir • <span>03</span></button>
+                </footer>
             </div>
         </div>
     )

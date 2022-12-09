@@ -53,4 +53,20 @@
     color: var(--red-500);
 }
 
+.comment footer button {
+    margin-top: 1.6rem;    
+    background: transparent;
+    outline: none;
+    border: none;
+    
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    color: var(--gray-500);
+    font-size: 14px;
+    line-height: 1.6;
 
+    cursor: pointer;
+
+}
