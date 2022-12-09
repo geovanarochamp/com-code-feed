@@ -15,27 +15,29 @@
     flex: 1;
 }
 
-.commentContent {
+.comment .commentContent {
     background: var(--gray-700);
     border-radius: 8px;    
     padding: 1.6rem 1.6rem 2.5rem;
 }
 
-.commentContent header {
+.comment .commentContent header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    margin-bottom: 1.6rem;
 }
 
-.commentContent header strong {
+.comment .commentContent header .author strong {
     display: block;
     line-height: 1.6;
     color: var(--gray-300);
 }
 
-.commentContent header span {
+.comment .commentContent header .author time {
     display: block;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: var(--gray-500);
 }
@@ -50,7 +52,13 @@
 }
 
 .commentContent header button:hover {
-    color: var(--red-500);
+    color: var(--red-500);    
+}
+
+.commentContent p {
+    color: var(--gray-100);
+    font-size: 1.4rem;
+    line-height: 1.4;
 }
 
 .comment footer button {

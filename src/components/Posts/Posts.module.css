@@ -31,21 +31,19 @@
     display: block;
     font-weight: 700;
     font-size: 1.6rem;
-    line-height: 1.6;
 
     color: var(--title-color);
 }
 
 .authorInfo span {
     font-size: 1.4rem;
-    line-height: 1.6;
 
-    color: var(--gray-100);
+    color: var(--gray-500);
 }
 
 .postContent p {
     margin-top: 2rem;
-    line-height: 1.6;
+    line-height: 1.4;
     color: var(--gray-400);
 }
 
