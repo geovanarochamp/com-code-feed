@@ -1,5 +1,5 @@
 .container {
-    max-width: 1120px;
+    max-width: 112rem;
     margin: auto;
 
     display: grid;
@@ -9,4 +9,15 @@
     gap: 3.2rem;
     margin-top: 3.2rem;
     margin-bottom: 8rem;
+}
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 87.5%;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
 }

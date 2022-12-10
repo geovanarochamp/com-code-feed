@@ -25,7 +25,8 @@ export function Post() {
 
                     <p>Vamos continuar o projeto do Pomodoro. Esse vai ser o segundo Live CoDe no mesmo projeto. Se você não estava no primeiro evento ou não viu a gravação é muito legal assistir hoje para já chegar sabendo o que está acontecendo! </p>
 
-                    <p>👉 O link para a gravação do primeiro evento do Live CoDe sobre o Pomodoro está aqui:<br /><a href="#"> https://app.nutror.com/v3/curso/6bdfb50e6f2579177147aad1ac55aa085eb54342/aula/5959050</a></p>
+                    <p>👉 O link para a gravação do primeiro evento do Live CoDe sobre o Pomodoro está aqui:
+                    <a href="#"> https://<wbr />app.nutror.com<wbr />/v3/curso<wbr />/6bdfb50e6f2579177147aad1ac55a<wbr />a085eb54342/aula/5959050</a></p>
 
                     <p><a href="#">#livecode</a> <a href="#">#pomodoro</a></p>
                 </div>

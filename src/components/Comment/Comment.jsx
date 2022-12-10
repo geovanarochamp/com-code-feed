@@ -14,12 +14,12 @@ export function Comment() {
                             <time title='06 de Dezembro de 2022' dateTime='06-12-2022 08:30:34'>Cerca de 1h atrás</time>
                         </div>
 
-                        <button title="Deletar comentário"><Trash size={24}/></button>
+                        <button title="Deletar comentário"><Trash size={20}/></button>
                     </header>
                     <p>Muito bom! Parabéns! 👏👏</p>
                 </div>
                 <footer>
-                    <button><HandsClapping size={20} /> Aplaudir • <span>03</span></button>
+                    <button title="Aplaudir comentário"><HandsClapping size={20} /> Aplaudir • <span>03</span></button>
                 </footer>
             </div>
         </div>
