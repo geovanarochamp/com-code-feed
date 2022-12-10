@@ -2,18 +2,18 @@ import styles from './Profile.module.css'
 import { PencilLine } from "phosphor-react"
 import { Avatar } from '../Avatar/Avatar'
 
-export function Profile() {
+export function Profile({ data }) {
     return (
         <aside className={styles.profileContent}> 
-          <div className={styles.profileCover}> <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=50" /></div>
+          <div className={styles.profileCover}> <img src={data.coverURL} /></div>
 
           <div className={styles.profileImg}>
-            <Avatar hasBorder src="https://github.com/pedromarins.png" />   
+            <Avatar hasBorder src={data.avatarURL} />   
                   
           </div>
 
-          <strong>Pedro Marins</strong>
-          <span>Mentor</span>
+          <strong>{data.name}</strong>
+          <span>{data.role}</span>
 
           <div className={styles.separatorLine}></div>
 

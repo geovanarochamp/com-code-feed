@@ -1,18 +1,20 @@
 import { Avatar } from '../Avatar/Avatar'
 import { Comment } from '../Comment/Comment'
-import styles from './Posts.module.css'
+import styles from './Post.module.css'
 
-export function Post() {
+
+export function Post({ author, publishedAt }) {
+    
     return (
-        <div className="posts">
+        <div className={styles.postWrapper}>
             <div className={styles.post}>
                 <header>
                     <div className={styles.author}>                        
-                        <Avatar hasBorder src="https://github.com/pedromarins.png"/>
+                        <Avatar hasBorder src={author.avatarURL}/>
                         
                         <div className={styles.authorInfo}>
-                            <strong>Pedro Marins</strong>
-                            <span>Mentor</span>
+                            <strong>{author.name}</strong>
+                            <span>{author.role}</span>
                         </div>
                     </div>
                     <time title='06 de Dezembro de 2022' dateTime='06-12-2022 08:30:34'>Publicado há 1h</time>

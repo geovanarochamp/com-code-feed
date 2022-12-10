@@ -1,11 +1,11 @@
+.postWrapper + .postWrapper {
+    margin-top: 3.2rem;
+}
+
 .post {
     background: var(--gray-800);
     padding: 4rem;
     border-radius: 8px;
-}
-
-.post + .post {
-    margin-top: 3.2rem;
 }
 
 .post header {
