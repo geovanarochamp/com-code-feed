@@ -2,7 +2,7 @@ import styles from './Comment.module.css'
 import { Avatar } from '../Avatar/Avatar'
 import { HandsClapping, Trash } from 'phosphor-react'
 
-export function Comment() {
+export function Comment({ content}) {
     return (
         <div className={styles.commentWrapper}>
             <Avatar hasBorder={false} src="https://github.com/geovanarochamp.png" />
@@ -16,7 +16,7 @@ export function Comment() {
 
                         <button title="Deletar comentário"><Trash size={20}/></button>
                     </header>
-                    <p>Muito bom! Parabéns! 👏👏</p>
+                    <p>{content}</p>
                 </div>
                 <footer>
                     <button title="Aplaudir comentário"><HandsClapping size={20} /> Aplaudir • <span>03</span></button>

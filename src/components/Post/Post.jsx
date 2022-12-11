@@ -11,11 +11,16 @@ import styles from './Post.module.css'
 
 export function Post({ author, publishedAt, content }) {
 
-    const [comments, setComment] = useState([1, 2])
+    const [comments, setComment] = useState(["Show! 🚀"])
+    const [newCommentText, setNewCommentText] = useState([""])
+
+    function handleNewCommentText() {
+        setNewCommentText(event.target.value)
+    }
 
     function handleCreateNewComment() {
         event.preventDefault()        
-        setComment([...comments, (comments.length+1)])
+        setComment([...comments, newCommentText])
     }    
 
     const publishedAtDistanceToNow = formatDistanceToNow(publishedAt, {
@@ -42,7 +47,7 @@ export function Post({ author, publishedAt, content }) {
                     <time title={newDateFormatted} dateTime={publishedAt.toISOString()}>{publishedAtDistanceToNow}</time>
                 </header>
 
-                {/* <div className={styles.postContent}>
+                <div className={styles.postContent}>
                     {
                         // console.log(content)
                         content.map(line => {                            
@@ -54,25 +59,25 @@ export function Post({ author, publishedAt, content }) {
                             }
                         })
                     }
-                </div> */}
+                </div>
 
                 <div className={styles.separatorLine}></div>
 
                 <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
                     <strong>Deixe seu feedback</strong>                    
-                        <textarea placeholder="Escreva aqui um comentário..." />
+                        <textarea onChange={handleNewCommentText} placeholder="Escreva aqui um comentário..." />
                         <footer>
                             <button type="submit" className={styles.publishBtn}>Publicar</button>
                         </footer>                    
                 </form>   
 
-                {/* <div className={styles.commentsList}>
+                <div className={styles.commentsList}>
                     {
                         comments.map(comment => {
-                            return <Comment />
+                            return <Comment content={comment}/>
                         })
                     }
-                </div>                                          */}
+                </div>                                         
             </div>                    
         </div>
     )
