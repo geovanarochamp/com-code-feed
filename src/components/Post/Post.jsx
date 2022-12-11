@@ -1,10 +1,12 @@
 import { Avatar } from '../Avatar/Avatar'
 import { Comment } from '../Comment/Comment'
-import { format } from 'date-fns'
+
+import { format, formatDistanceToNow } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
+import { useState } from 'react'
 
 
 import styles from './Post.module.css'
-import { useState } from 'react'
 
 
 export function Post({ author, publishedAt, content }) {
@@ -12,11 +14,19 @@ export function Post({ author, publishedAt, content }) {
     const [comments, setComment] = useState([1, 2])
 
     function handleCreateNewComment() {
-        event.preventDefault()
-        console.log("entrei")
+        event.preventDefault()        
         setComment([...comments, (comments.length+1)])
-    }
-    
+    }    
+
+    const publishedAtDistanceToNow = formatDistanceToNow(publishedAt, {
+        addSuffix: true,
+        locale: ptBR
+    })
+
+    const newDateFormatted = format(publishedAt, "dd 'de' MMMM 'de' yyyy", {
+        locale: ptBR
+    })    
+
     return (
         <div className={styles.postWrapper}>
             <div className={styles.post}>
@@ -29,10 +39,10 @@ export function Post({ author, publishedAt, content }) {
                             <span>{author.role}</span>
                         </div>
                     </div>
-                    <time title='06 de Dezembro de 2022' dateTime='06-12-2022 08:30:34'>Publicado há 1h</time>
+                    <time title={newDateFormatted} dateTime={publishedAt.toISOString()}>{publishedAtDistanceToNow}</time>
                 </header>
 
-                <div className={styles.postContent}>
+                {/* <div className={styles.postContent}>
                     {
                         // console.log(content)
                         content.map(line => {                            
@@ -44,7 +54,7 @@ export function Post({ author, publishedAt, content }) {
                             }
                         })
                     }
-                </div>
+                </div> */}
 
                 <div className={styles.separatorLine}></div>
 
@@ -56,13 +66,13 @@ export function Post({ author, publishedAt, content }) {
                         </footer>                    
                 </form>   
 
-                <div className={styles.commentsList}>
+                {/* <div className={styles.commentsList}>
                     {
                         comments.map(comment => {
                             return <Comment />
                         })
                     }
-                </div>                                         
+                </div>                                          */}
             </div>                    
         </div>
     )
