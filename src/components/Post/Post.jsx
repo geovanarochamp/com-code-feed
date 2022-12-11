@@ -1,9 +1,21 @@
 import { Avatar } from '../Avatar/Avatar'
 import { Comment } from '../Comment/Comment'
+import { format } from 'date-fns'
+
+
 import styles from './Post.module.css'
+import { useState } from 'react'
 
 
 export function Post({ author, publishedAt, content }) {
+
+    const [comments, setComment] = useState([1, 2])
+
+    function handleCreateNewComment() {
+        event.preventDefault()
+        console.log("entrei")
+        setComment([...comments, (comments.length+1)])
+    }
     
     return (
         <div className={styles.postWrapper}>
@@ -24,8 +36,7 @@ export function Post({ author, publishedAt, content }) {
                     {
                         // console.log(content)
                         content.map(line => {                            
-                            if (line.type === 'paragraph') {
-                                console.log("oi")
+                            if (line.type === 'paragraph') {                            
                                 return <p>{line.content}</p>
 
                             } else if (line.type === 'link') {
@@ -37,20 +48,20 @@ export function Post({ author, publishedAt, content }) {
 
                 <div className={styles.separatorLine}></div>
 
-                <form className={styles.commentForm}>
-                    <strong>Deixe seu feedback</strong>
-                    <form>
+                <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
+                    <strong>Deixe seu feedback</strong>                    
                         <textarea placeholder="Escreva aqui um comentário..." />
                         <footer>
-                            <button className={styles.publishBtn}>Publicar</button>
-                        </footer>
-                    </form>
+                            <button type="submit" className={styles.publishBtn}>Publicar</button>
+                        </footer>                    
                 </form>   
 
                 <div className={styles.commentsList}>
-                    <Comment />
-                    <Comment />
-                    <Comment />
+                    {
+                        comments.map(comment => {
+                            return <Comment />
+                        })
+                    }
                 </div>                                         
             </div>                    
         </div>
