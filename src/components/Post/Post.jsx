@@ -21,6 +21,8 @@ export function Post({ author, publishedAt, content }) {
     function handleCreateNewComment() {
         event.preventDefault()        
         setComment([...comments, newCommentText])
+        setNewCommentText("")
+
     }    
 
     const publishedAtDistanceToNow = formatDistanceToNow(publishedAt, {
@@ -65,7 +67,7 @@ export function Post({ author, publishedAt, content }) {
 
                 <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
                     <strong>Deixe seu feedback</strong>                    
-                        <textarea onChange={handleNewCommentText} placeholder="Escreva aqui um comentário..." />
+                        <textarea onChange={handleNewCommentText} value={newCommentText} placeholder="Escreva aqui um comentário..." />
                         <footer>
                             <button type="submit" className={styles.publishBtn}>Publicar</button>
                         </footer>                    
