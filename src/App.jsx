@@ -23,7 +23,14 @@ const posts = [
       name: 'Pedro Marins',
       role: 'Mentor'
     },
-    publishedAt: new Date('2022-12-09 20:00')
+    content: [
+      { type: 'paragraph', content: 'Faaaaaala!'},
+      { type: 'paragraph', content: 'Amanhã às 9h temos um encontro marcado para mais um Live CoDe! 🚀'},
+      { type: 'paragraph', content: 'Vamos continuar o projeto do Pomodoro. Esse vai ser o segundo Live CoDe no mesmo projeto. Se você não estava no primeiro evento ou não viu a gravação é muito legal assistir hoje para já chegar sabendo o que está acontecendo!'},
+      { type: 'paragraph', content: '👉 O link para a gravação do primeiro evento do Live CoDe sobre o Pomodoro está aqui:'},     
+      { type: 'link', content: 'https://<wbr />app.nutror.com<wbr />/v3/curso<wbr />/6bdfb50e6f2579177147aad1ac55a<wbr />a085eb54342/aula/5959050'},
+    ],
+    publishedAt: new Date('2022-12-10 20:00')
   },
   {
     id: 2,
@@ -32,6 +39,11 @@ const posts = [
       name: 'Henrique de Andrade',
       role: 'Mentor'
     },
+    content: [
+      { type: 'paragraph', content: 'Hoje é dia de entrega de projetos! 🚀'},      
+      { type: 'paragraph', content: ' O link para entregar o Projeto 03 é esse aqui! '},     
+      { type: 'link', content: 'https://conquistesuavaga.com/entrega-projeto-3'},
+    ],
     publishAt: new Date('2022-12-09 18:')
   },
   {
@@ -41,6 +53,12 @@ const posts = [
       name: 'Geovana Rocha',
       role: 'Desenvolvedora Front End'
     },
+    content: [
+      { type: 'paragraph', content: 'Fala, Turma'},
+      { type: 'paragraph', content: 'Acabei de assistir ao episódio 6 do ReadMe, e recomendo fortemente!'},
+      { type: 'paragraph', content: 'O nível crítico dos reviews dos outros episódios sempre foram muito bons, mas esse veio muito de encontro a história da minha jornada que sei que ainda vou compartilhar em um papo de dev quando conquistar minha primeira vaga haha.'},
+      { type: 'paragraph', content: 'Encontra-se disponível lá no nutror, para quem se interessar.'}
+    ],
     publishAt: new Date('2022-12-09 14:07')
   }
 ]
@@ -57,7 +75,7 @@ function App() {
           posts.map( post => {
             return (
               <Post 
-                author={post.author} publishedAt={post.publishedAt}
+                author={post.author} publishedAt={post.publishedAt} content={post.content}
               />
             )
           })

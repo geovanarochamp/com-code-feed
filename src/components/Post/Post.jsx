@@ -3,7 +3,7 @@ import { Comment } from '../Comment/Comment'
 import styles from './Post.module.css'
 
 
-export function Post({ author, publishedAt }) {
+export function Post({ author, publishedAt, content }) {
     
     return (
         <div className={styles.postWrapper}>
@@ -21,16 +21,18 @@ export function Post({ author, publishedAt }) {
                 </header>
 
                 <div className={styles.postContent}>
-                    <p>Faaaaaala! </p>
+                    {
+                        // console.log(content)
+                        content.map(line => {                            
+                            if (line.type === 'paragraph') {
+                                console.log("oi")
+                                return <p>{line.content}</p>
 
-                    <p>Amanhã às 9h temos um encontro marcado para mais um Live CoDe!  🚀</p>
-
-                    <p>Vamos continuar o projeto do Pomodoro. Esse vai ser o segundo Live CoDe no mesmo projeto. Se você não estava no primeiro evento ou não viu a gravação é muito legal assistir hoje para já chegar sabendo o que está acontecendo! </p>
-
-                    <p>👉 O link para a gravação do primeiro evento do Live CoDe sobre o Pomodoro está aqui:
-                    <a href="#"> https://<wbr />app.nutror.com<wbr />/v3/curso<wbr />/6bdfb50e6f2579177147aad1ac55a<wbr />a085eb54342/aula/5959050</a></p>
-
-                    <p><a href="#">#livecode</a> <a href="#">#pomodoro</a></p>
+                            } else if (line.type === 'link') {
+                                return <p><a href='#'>{line.content}</a></p>
+                            }
+                        })
+                    }
                 </div>
 
                 <div className={styles.separatorLine}></div>
