@@ -11,6 +11,15 @@ import styles from './Post.module.css'
 
 export function Post({ author, publishedAt, content }) {
 
+    const publishedAtDistanceToNow = formatDistanceToNow(publishedAt, {
+        addSuffix: true,
+        locale: ptBR
+    })
+
+    const newDateFormatted = format(publishedAt, "dd 'de' MMMM 'de' yyyy", {
+        locale: ptBR
+    })    
+
     const [comments, setComment] = useState(["Show! 🚀"])
     const [newCommentText, setNewCommentText] = useState([""])
 
@@ -25,15 +34,12 @@ export function Post({ author, publishedAt, content }) {
 
     }    
 
-    const publishedAtDistanceToNow = formatDistanceToNow(publishedAt, {
-        addSuffix: true,
-        locale: ptBR
-    })
-
-    const newDateFormatted = format(publishedAt, "dd 'de' MMMM 'de' yyyy", {
-        locale: ptBR
-    })    
-
+    function deleteComment(commentToDelete) {
+        console.log(commentToDelete)
+        const newComments = comments.filter(comment => comment !== commentToDelete)        
+        setComment(newComments)
+    }
+   
     return (
         <div className={styles.postWrapper}>
             <div className={styles.post}>
@@ -54,10 +60,10 @@ export function Post({ author, publishedAt, content }) {
                         // console.log(content)
                         content.map(line => {                            
                             if (line.type === 'paragraph') {                            
-                                return <p>{line.content}</p>
+                                return <p key={line.content}>{line.content}</p>
 
                             } else if (line.type === 'link') {
-                                return <p><a href='#'>{line.content}</a></p>
+                                return <p key={line.content}><a href='#'>{line.content}</a></p>
                             }
                         })
                     }
@@ -76,7 +82,7 @@ export function Post({ author, publishedAt, content }) {
                 <div className={styles.commentsList}>
                     {
                         comments.map(comment => {
-                            return <Comment content={comment}/>
+                            return <Comment key={comment} content={comment} onDeleteComment={deleteComment}/>
                         })
                     }
                 </div>                                         
