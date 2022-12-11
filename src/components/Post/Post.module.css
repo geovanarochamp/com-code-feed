@@ -115,3 +115,8 @@
 .publishBtn:hover {
     background: var(--green-500);
 }
+
+.publishBtn:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
