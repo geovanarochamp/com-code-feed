@@ -45,7 +45,7 @@ const posts = [
       {
         type: "link",
         content:
-          "https://<wbr />app.nutror.com<wbr />/v3/curso<wbr />/6bdfb50e6f2579177147aad1ac55a<wbr />a085eb54342/aula/5959050",
+          "https://app.nutror.com/v3/curso/6bdfb50e6f2579177147aad1ac55aa085eb54342/aula/5959050",
       },
     ],
     publishedAt: new Date("2022-12-10 20:00:04"),
